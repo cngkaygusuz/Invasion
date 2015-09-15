@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OurApp</string>
+    <string name="tagline">An awesome survival game</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>
