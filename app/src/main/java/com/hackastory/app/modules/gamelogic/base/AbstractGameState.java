@@ -3,6 +3,7 @@ package com.hackastory.app.modules.gamelogic.base;
 
 import android.graphics.Bitmap;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.hackastory.app.R;
@@ -15,12 +16,12 @@ public abstract class AbstractGameState {
 
     public String title;
     public String narrative;
-    public ArrayList<Bitmap> images;
+    public ArrayList<Integer> images;  // Holds R.drawable.<BLAH>
     public ArrayList<AbstractChoice> choices;
     public int layouttype;  // Should be something like  R.layout.<BLAH>
 
     public AbstractGameState() {
-        images = new ArrayList<Bitmap>();
+        images = new ArrayList<Integer>();
         choices = new ArrayList<AbstractChoice>();
     }
 
@@ -74,7 +75,15 @@ public abstract class AbstractGameState {
     }
 
     protected void renderSituationStatementTextImage(SituationActivity act) {
+        TextView titleview = (TextView) act.findViewById(R.id.title);
+        Button continuebtn = (Button) act.findViewById(R.id.continue_button);
+        ImageView imview = (ImageView) act.findViewById(R.id.image);
 
+        titleview.setText(title);
+        imview.setImageResource(images.get(0));
+
+        continuebtn.setTag("123");
+        continuebtn.setOnClickListener(act);
     }
 
     protected void renderSituationDecideFriends(SituationActivity act) {

@@ -1,22 +1,39 @@
 package com.hackastory.app.modules.gamelogic.demo.gamestates;
 
-
-import android.widget.Button;
 import com.hackastory.app.R;
-import com.hackastory.app.modules.gamelogic.base.Abstract_SituationStatementText;
-import com.hackastory.app.modules.situation.activities.SituationActivity;
+import com.hackastory.app.modules.gamelogic.base.AbstractChoice;
+import com.hackastory.app.modules.gamelogic.base.AbstractGameState;
 
-public class DS5 extends Abstract_SituationStatementText {
+
+public class DS5 extends AbstractGameState {
     public DS5() {
-        title = "Concluding the Boat Trip";
-        narrative = "You decided to give your place to the man. You can read his gratitude in his eyes. He gives you " +
-                "a piece of paper, which seems holding an address.\n" +
-                "OBTAINED UNRECOGNIZED ADDRESS";
+        super();
+
+        title = "Departure";
+        narrative = "You get to the nearest border, you can either";
+
+        choices.add(new CH1()); choices.add(new CH2());
+
+        layouttype = R.layout.situation_text;
     }
 
-    protected void renderSituationStatementText(SituationActivity act) {
-        super.renderSituationStatementText(act);
-        Button btn = (Button) act.findViewById(R.id.continue_button);
-        btn.setTag("1000");
+    private class CH1 extends AbstractChoice {
+        public String getChoiceText() {
+            return "Leave by land";
+        }
+
+        public AbstractGameState getNextState() {
+            return null;
+        }
+    }
+
+    private class CH2 extends AbstractChoice {
+        public String getChoiceText() {
+            return "Leave by sea";
+        }
+
+        public AbstractGameState getNextState() {
+            return new DS6();
+        }
     }
 }
