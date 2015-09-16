@@ -29,6 +29,10 @@ public class DS3 extends AbstractGameState {
     }
 
     private class CH2 extends AbstractChoice {
+        public CH2() {
+            enabled = true;
+        }
+
         public String getChoiceText() {
             return "You sell your valuables for marked down prices and travel with cash only";
         }

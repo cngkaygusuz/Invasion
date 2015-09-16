@@ -28,6 +28,10 @@ public class DS5 extends AbstractGameState {
     }
 
     private class CH2 extends AbstractChoice {
+        public CH2() {
+            enabled = true;
+        }
+
         public String getChoiceText() {
             return "Leave by sea";
         }

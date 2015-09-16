@@ -24,7 +24,7 @@ public class DS8 extends AbstractGameState {
         }
 
         public AbstractGameState getNextState() {
-            return new DS8();
+            return new EndOfDemo();
         }
     }
 
@@ -34,7 +34,7 @@ public class DS8 extends AbstractGameState {
         }
 
         public AbstractGameState getNextState() {
-            return null;
+            return new EndOfDemo();
         }
     }
 }

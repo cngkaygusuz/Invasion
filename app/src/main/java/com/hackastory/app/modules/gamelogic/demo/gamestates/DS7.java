@@ -19,6 +19,10 @@ public class DS7 extends AbstractGameState {
     }
 
     private class CH1 extends AbstractChoice {
+        public CH1() {
+            enabled = true;
+        }
+
         public String getChoiceText() {
             return "You pay and are left with $5000";
         }

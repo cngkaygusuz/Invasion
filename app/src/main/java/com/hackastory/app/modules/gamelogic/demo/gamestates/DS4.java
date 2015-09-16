@@ -28,6 +28,10 @@ public class DS4 extends AbstractGameState {
     }
 
     private class CH2 extends AbstractChoice {
+        public CH2() {
+            enabled = true;
+        }
+
         public String getChoiceText() {
             return "You ask him to make other arrangements and choose the family dog";
         }

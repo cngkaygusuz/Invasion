@@ -16,11 +16,15 @@ import com.hackastory.app.R;
 import com.hackastory.app.modules.situation.activities.SituationActivity;
 
 public abstract class AbstractChoice {
+    public boolean enabled = false;
+
     public abstract String getChoiceText();
     public abstract AbstractGameState getNextState();
 
     public Button asButton(SituationActivity act, String tag) {
         Button btn = new Button(act);
+
+        btn.setClickable(enabled);
 
         btn.setText(getChoiceText()); btn.setTextColor(Color.parseColor("#BBBBBB"));
         btn.setOnClickListener(act);
