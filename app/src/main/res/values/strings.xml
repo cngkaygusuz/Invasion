@@ -4,4 +4,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="intro_start_text">Start</string>
+
+    <string name="facebook_app_id">wat</string>
+    <string name="companion_decision">Decide who you will leave behind</string>
+    <string name="start">Start</string>
+
+    <string name="contnue">Continue</string>
+
 </resources>

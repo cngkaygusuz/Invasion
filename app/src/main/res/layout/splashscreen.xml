@@ -17,5 +17,10 @@
             android:text="@string/tagline" android:gravity="center"
             android:layout_marginTop="20dp" android:textSize="20sp"/>
 
+    <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="250dp"
+            android:id="@+id/facebooklogin" android:text="@string/start"/>
+
 
 </LinearLayout>

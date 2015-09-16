@@ -2,20 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hackastory.app" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:theme="@style/AppTheme"
+            android:largeHeap="true"
+            >
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+        <activity android:name=".modules.splashscreen.activities.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-    </application>
 
+        <activity android:name=".modules.introduction.activities.IntroductionActivity"></activity>
+        <activity android:name=".modules.situation.activities.SituationActivity"></activity>
+
+        <activity android:name=".modules.endingscreen.activities.EndingActivity"></activity>
+
+    </application>
 </manifest>
