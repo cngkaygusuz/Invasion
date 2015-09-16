@@ -10,35 +10,19 @@ public class DS4 extends AbstractGameState {
         super();
 
         title = "A Friend's Request";
-        narrative = "As you start leave with the family, your friend from university comes to your house and asks for a ride";
+        narrative = "Two hours later, you pack up whatever you can fit in the trunk of the car. As you say your final goodbyes to your neighbours, your friend from university comes to your house. Worried and frightened, he asks for a ride away from the capital.\n\nMake your decision.";
 
-        choices.add(new CH1()); choices.add(new CH2());
+        images.add(R.drawable.emiel);
+        images.add(R.drawable.dog);
 
-        layouttype = R.layout.situation_text;
+        layouttype = R.layout.situation_decidefriends;
     }
 
-    private class CH1 extends AbstractChoice {
-        public String getChoiceText() {
-            return "You take him and leave the family dog behind";
-        }
-
-        public AbstractGameState getNextState() {
-            return null;
-        }
-    }
-
-    private class CH2 extends AbstractChoice {
-        public CH2() {
-            enabled = true;
-        }
-
-        public String getChoiceText() {
-            return "You ask him to make other arrangements and choose the family dog";
-        }
-
-        public AbstractGameState getNextState() {
+    public AbstractGameState getNextState(int id) {
+        if (id == 1) {
             return new DS5();
+        } else {
+            throw new RuntimeException("DIE IN HELL.");
         }
     }
-
 }

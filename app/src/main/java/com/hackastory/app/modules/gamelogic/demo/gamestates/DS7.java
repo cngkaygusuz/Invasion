@@ -10,7 +10,7 @@ public class DS7 extends AbstractGameState {
         super();
 
         title = "Human Trafficker";
-        narrative = "The trafficker asks $20,000 to take the entire family in a bigger boat but you have to leave the dog behind.";
+        narrative = "You get approached by a trafficker. He says he can he can get your family to Europe for $20,000 but the dog has to be left behind.";
 
         choices.add(new CH1());
         choices.add(new CH2());

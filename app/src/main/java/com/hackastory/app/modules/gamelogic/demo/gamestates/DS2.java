@@ -8,7 +8,7 @@ import com.hackastory.app.modules.gamelogic.base.AbstractGameState;
 public class DS2 extends AbstractGameState {
     public DS2() {
         title = "A year after";
-        narrative = "X, 33 is sitting in his apartment one evening and suddenly bombs go off in the city center and there are huge numbers of casualties. The unrest that started in the southern border has now reached the capital and people decide to leave for safer areas.";
+        narrative = "Kolechia have been making inroads into the capital from the southern part of the country. One night as you sit in the living room watching a football match, you can hear aerial bombardment. Suddenly, the phones are ringing off the hook. People are making sudden decisions to pack and leave the city.";
         choices.add(new CH1()); choices.add(new CH2());
 
         layouttype = R.layout.situation_text;
@@ -20,7 +20,7 @@ public class DS2 extends AbstractGameState {
         }
 
         public String getChoiceText() {
-            return "Leave";
+            return "You can follow the example of your friends and relatives and leave with the family";
         }
 
         public AbstractGameState getNextState() {
@@ -30,7 +30,7 @@ public class DS2 extends AbstractGameState {
 
     private class CH2 extends AbstractChoice {
         public String getChoiceText() {
-            return "Stay";
+            return "You can wait it out in the city and hope things get better";
         }
 
         public AbstractGameState getNextState() {

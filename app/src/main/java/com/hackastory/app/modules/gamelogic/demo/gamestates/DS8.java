@@ -10,7 +10,7 @@ public class DS8 extends AbstractGameState {
         super();
 
         title = "the Turkish Border";
-        narrative = "The boat reaches the coast of Turkey in a week however, Turkey closes its border a day before you get there. They are allowing kids to cross the border.";
+        narrative = "A week later your boat reaches the coast of Turkey only to find that the borders are closed. You can see a crush of boats and people who have been denied entry. You hear a human rights activist announcing that children under the age of 12 are being allowed in with parental consent";
 
         choices.add(new CH1());
         choices.add(new CH2());

@@ -10,7 +10,7 @@ public class DS5 extends AbstractGameState {
         super();
 
         title = "Departure";
-        narrative = "You get to the nearest border, you can either";
+        narrative = "A few days later, you finally make it to the nearest border, you see the border police with guns and dogs around the barbed wire fence. You have a decision to make. Do you;";
 
         choices.add(new CH1()); choices.add(new CH2());
 

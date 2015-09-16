@@ -11,7 +11,7 @@ public class DS3 extends AbstractGameState {
         super();
 
         title = "Money";
-        narrative = "The ATMs have been maxed out, there is no other way of liquidating your assets.";
+        narrative = "Early morning, people are scampering to get out of the city. Houses are abandoned and there are long lines of people in the highway trying to move away from the city. ATMs are maxed out and banks don’t have enough reserve money to replace what has been withdrawn. Your options for liquidating your assets decrease by the hour.";
 
         choices.add(new CH1()); choices.add(new CH2());
 

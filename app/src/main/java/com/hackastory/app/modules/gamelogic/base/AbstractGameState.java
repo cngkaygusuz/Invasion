@@ -1,7 +1,6 @@
 package com.hackastory.app.modules.gamelogic.base;
 
 
-import android.graphics.Bitmap;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -87,7 +86,25 @@ public abstract class AbstractGameState {
     }
 
     protected void renderSituationDecideFriends(SituationActivity act) {
+        TextView titleview = (TextView) act.findViewById(R.id.title);
+        TextView narrativeview = (TextView) act.findViewById(R.id.narrative);
 
+        ImageView im1 = (ImageView) act.findViewById(R.id.im1);
+        ImageView im2 = (ImageView) act.findViewById(R.id.im2);
+
+        im1.setTag("0");
+        im1.setClickable(true);
+
+        im2.setTag("1");
+        im2.setClickable(true);
+
+        titleview.setText(title);
+        narrativeview.setText(narrative);
+        im1.setImageResource(images.get(0));
+        im2.setImageResource(images.get(1));
+
+        im1.setOnClickListener(act);
+        im2.setOnClickListener(act);
     }
 }
 

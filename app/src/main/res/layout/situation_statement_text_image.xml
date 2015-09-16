@@ -15,6 +15,9 @@
     <ImageView android:layout_width="wrap_content" android:layout_height="200dp"
                android:src="@drawable/apl2" android:layout_marginBottom="10dp" android:id="@+id/image"/>
 
+    <View style="@style/Line"/>
+
+
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">

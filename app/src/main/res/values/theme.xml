@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Container">
-        <item name="android:background">#4A148C</item>
+        <item name="android:background">@drawable/bkgrnd</item>
     </style>
 
     <style name="Button" parent="android:Widget.Button">
@@ -12,4 +12,12 @@
     <style name="HSText">
         <item name="android:textColor">#FFFFFF</item>
     </style>
+
+    <style name="Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
 </resources>

@@ -31,7 +31,6 @@ public class SituationActivity extends Activity implements View.OnClickListener 
     public void onClick(View view) {
         int id = getViewTagAsInt(view);
 
-
         if (id == 1000) {
             setEndOfDemo();
             return;
