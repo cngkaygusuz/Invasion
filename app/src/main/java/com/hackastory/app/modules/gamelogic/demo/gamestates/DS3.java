@@ -9,7 +9,6 @@ public class DS3 extends Abstract_SituationStatementText {
         title = "The Boat Trip";
         narrative = "Insert narrative here";
 
-        layouttype = R.layout.situation_statement_text;
         nextstate = new DS4();
     }
 }

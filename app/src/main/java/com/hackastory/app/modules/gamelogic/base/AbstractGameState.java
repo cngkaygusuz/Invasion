@@ -3,6 +3,7 @@ package com.hackastory.app.modules.gamelogic.base;
 
 import android.graphics.Bitmap;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.hackastory.app.R;
 import com.hackastory.app.modules.situation.activities.SituationActivity;
@@ -42,15 +43,25 @@ public abstract class AbstractGameState {
         return choices.get(id).getNextState();
     }
 
-    private void renderSituationText(SituationActivity act) {
+    protected void renderSituationText(SituationActivity act) {
+        TextView titleview = (TextView) act.findViewById(R.id.title);
+        TextView narrativeview = (TextView) act.findViewById(R.id.narrative);
+
+        titleview.setText(title);
+        narrativeview.setText(narrative);
+
+        LinearLayout buttoncontainer = (LinearLayout) act.findViewById(R.id.buttonholder);
+
+        for (int i=0; i<choices.size(); i++) {
+            buttoncontainer.addView(choices.get(i).asButton(act, String.format("%d", i)));
+        }
+    }
+
+    protected void renderSituationImage(SituationActivity act) {
 
     }
 
-    private void renderSituationImage(SituationActivity act) {
-
-    }
-
-    private void renderSituationStatementText(SituationActivity act) {
+    protected void renderSituationStatementText(SituationActivity act) {
         TextView titleview = (TextView) act.findViewById(R.id.title);
         TextView narrativeview = (TextView) act.findViewById(R.id.narrative);
         Button continuebtn = (Button) act.findViewById(R.id.continue_button);
@@ -62,11 +73,11 @@ public abstract class AbstractGameState {
         continuebtn.setOnClickListener(act);
     }
 
-    private void renderSituationStatementTextImage(SituationActivity act) {
+    protected void renderSituationStatementTextImage(SituationActivity act) {
 
     }
 
-    private void renderSituationDecideFriends(SituationActivity act) {
+    protected void renderSituationDecideFriends(SituationActivity act) {
 
     }
 }

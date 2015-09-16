@@ -10,8 +10,8 @@ public class DS2 extends AbstractGameState {
         title = "A year after";
         narrative = "Kolechia quickly blitzed their way through the defenses of your country. The capital city" +
                 "is under aerial bombardment. You have to leave the country.\n" +
-                "You have two means of accomplishing this task: You may use your personal car to take temporary refugee" +
-                "in one of the neighboring country. You may also board the ship to set sail for Europe.";
+                "You have two means of facilitating your departure: You may use your personal car to take temporary refugee" +
+                "in one of the neighboring country, or you may also board the ship to set sail for Europe.";
         choices.add(new CH1()); choices.add(new CH2());
 
         layouttype = R.layout.situation_text;
@@ -36,6 +36,4 @@ public class DS2 extends AbstractGameState {
             return new DS3();
         }
     }
-
-
 }
