@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Container">
+        <item name="android:background">#4A148C</item>
+    </style>
+
+    <style name="Button" parent="android:Widget.Button">
+        <item name="android:background">#9C27B0</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="HSText">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+</resources>

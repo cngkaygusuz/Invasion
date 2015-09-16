@@ -3,7 +3,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-        android:background="#4A148C">
+        style="@style/Container">
 
     <com.hackastory.app.common.SSTextView
             android:layout_width="match_parent"
@@ -12,17 +12,16 @@
             android:text="@string/app_name"
             android:id="@+id/textView" android:layout_gravity="center_horizontal"
             android:gravity="center" android:textSize="75sp"
-            android:textColor="#FFFFFF"/>
-
+            style="@style/HSText"/>
 
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
             android:text="@string/tagline" android:gravity="center"
             android:layout_marginTop="20dp" android:textSize="20sp"
-            android:textColor="#FFFFFF"/>
-
+            style="@style/HSText"/>
     <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" android:layout_marginTop="250dp"
             android:id="@+id/facebooklogin" android:text="@string/start"
-            android:background="#9C27B0" android:textColor="#FFFFFF"/>
+            style="@style/Button"/>
+
 </LinearLayout>
